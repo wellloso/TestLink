@@ -11,6 +11,7 @@
 <script src="//cdn.jsdelivr.net/npm/clappr-playback-rate-plugin@latest/dist/clappr-playback-rate-plugin.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/shaka-player@2.5.10/dist/shaka-player.compiled.min.js"></script>
 <script src="//cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.external.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/@clappr/hlsjs-playback@latest/dist/hlsjs-playback.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/cdnbye-shaka@latest"></script>
 <style> 
 body {
@@ -26,7 +27,7 @@ body {
           height: '100%',
           width: '100%',
           autoPlay: true,
-          plugins: [LevelSelector, DashShakaPlayback, Clappr.MediaControl],
+          plugins: [LevelSelector,HlsjsPlayback, DashShakaPlayback, Clappr.MediaControl],
           events: {onReady: function() {var plugin = this.getPlugin('click_to_pause'); plugin && plugin.disable();},},
           chromecast: {
               preload: 'metadata',
